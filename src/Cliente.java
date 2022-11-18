@@ -20,5 +20,11 @@ public class Cliente {
         accion= new GirarDerecha(bot);
         gestorBot.setAccion(accion);
         gestorBot.ejecutarAccion();
+
+        accion= new Borrar(bot);
+        gestorBot.setAccion(accion);
+        gestorBot.ejecutarAccion();
+
+        bot.go();
     }
 }

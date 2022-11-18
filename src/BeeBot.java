@@ -1,13 +1,19 @@
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Stack;
 
 public class BeeBot {
 
-    Queue<Accion> cola= new LinkedList<>();
+    Stack<Accion> pila= new Stack<>();
 
     public void addAccion(Accion a){
-        cola.add(a);
+        if (a.getClass().equals(Borrar.class)){
+            this.borrar();
+            return;
+        }
+
+        pila.add(a);
     }
         public void irAdelante(){
         System.out.println("Siguiendo recto...");
@@ -22,5 +28,15 @@ public class BeeBot {
     }
     public void girarIzquierda(){
         System.out.println("Girando izquierda...");
+    }
+
+    public void borrar(){
+        pila.pop();
+    }
+
+    public void go(){
+        for (Accion a: pila){
+            a.execute();
+        }
     }
 }
