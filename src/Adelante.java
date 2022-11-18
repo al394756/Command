@@ -4,6 +4,9 @@ public class Adelante implements Accion{
         bot.irAdelante();
     }
 
+    public void almacenar(){
+        bot.addAccion(this);
+    }
     public Adelante(BeeBot bot) {
         this.bot = bot;
     }

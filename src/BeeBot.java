@@ -1,6 +1,15 @@
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 public class BeeBot {
 
-    public void irAdelante(){
+    Queue<Accion> cola= new LinkedList<>();
+
+    public void addAccion(Accion a){
+        cola.add(a);
+    }
+        public void irAdelante(){
         System.out.println("Siguiendo recto...");
     }
 

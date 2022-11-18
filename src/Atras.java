@@ -6,6 +6,9 @@ public class Atras implements Accion{
         bot.irAtras();
     }
 
+    public void almacenar(){
+        bot.addAccion(this);
+    }
     public Atras(BeeBot bot){
         this.bot=bot;
     }

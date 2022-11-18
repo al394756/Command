@@ -6,4 +6,7 @@ public class GirarDerecha implements Accion{
     public GirarDerecha(BeeBot bot){
         this.bot=bot;
     }
+    public void almacenar(){
+        bot.addAccion(this);
+    }
 }

@@ -5,6 +5,10 @@ public class GirarIzquierda implements  Accion{
         bot.girarIzquierda();
     }
 
+    public void almacenar(){
+        bot.addAccion(this);
+    }
+
     public GirarIzquierda(BeeBot bot) {
         this.bot = bot;
     }

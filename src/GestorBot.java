@@ -10,6 +10,6 @@ public class GestorBot {
     }
 
     public void ejecutarAccion(){
-        accion.execute();
+        accion.almacenar();
     }
 }
